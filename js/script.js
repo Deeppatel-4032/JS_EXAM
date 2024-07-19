@@ -9,6 +9,13 @@ let state = document.getElementById("state");
 
 let showData = document.getElementById("showData");
 
+let erru = document.querySelector(".erru");
+let errl = document.querySelector(".errl");
+let errem = document.querySelector(".errem");
+let errp = document.querySelector(".errp");
+let erradd = document.querySelector(".erradd");
+let errct = document.querySelector(".errct");
+let errst = document.querySelector(".errst");
 
 let isEdit = false;
 let isIndex;
@@ -56,8 +63,41 @@ const FormData = () => {
 
       Storage = updataData;
     } else {
-        if(uname == "") {
-
+        if(uname.value == "") {
+            erru.innerHTML = "req Name"
+            return false
+        }
+        else if(lname.value = "") {
+            errl.innerHTML = "req last Name"
+            return false
+        }
+        else if(umail.value = "") {
+            errem.innerHTML = "req mail"
+            return false
+        }
+        else if( pass.value = "") {
+            errp.innerHTML = "req Password"
+            return false
+        }
+        else if( add.value = "") {
+            erradd.innerHTML = "req Address"
+            return false
+        }
+        else if( city.value = "") {
+            errct.innerHTML = "req City"
+            return false
+        }
+        else if( state.value = "") {
+            errst.innerHTML = "req State"
+            return false
+        } else {
+            erru.innerHTML = "";
+            errl.innerHTML = "";
+            errem.innerHTML = "";
+            errp.innerHTML = "";
+            erradd.innerHTML = "";
+            errct.innerHTML = "";
+            errst.innerHTML = "";
         }
         Storage = [...Storage ,product]
         console.log("product", product);
