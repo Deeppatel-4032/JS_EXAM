@@ -122,7 +122,7 @@ const displyData = () => {
     showData.innerHTML = "";
 
     Storage.forEach(rec => {
-        showData.innerHTML += `<tr>
+        showData.innerHTML +=    `<tr>
                                     <th scope="row">${rec.id}</th>
                                     <td>${rec.name}</td>
                                     <td>${rec.lname}</td>
